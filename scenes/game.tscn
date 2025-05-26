@@ -227,6 +227,8 @@ collision_layer = 2
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -6)
 zoom = Vector2(4, 4)
+limit_bottom = 130
+limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="Platform_Long_Grass" parent="." instance=ExtResource("3_lnu2h")]
