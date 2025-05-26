@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=4 uid="uid://bfd0k3scq3tc5"]
+[gd_scene load_steps=12 format=4 uid="uid://bfd0k3scq3tc5"]
 
 [ext_resource type="PackedScene" uid="uid://d4abjbac3h07a" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://dg04yudebn20s" path="res://assets/sprites/world_tileset.png" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://bgcop5vxggp5h" path="res://scenes/platform_long_grass.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://c8j2ociguisrl" path="res://scenes/coin.tscn" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://bvxmtnwsj475a" path="res://scenes/killzone.tscn" id="5_iywne"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -214,6 +215,8 @@ _data = {
 &"move": SubResource("Animation_lnu2h")
 }
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_p57ef"]
+
 [node name="Game" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -243,3 +246,9 @@ autoplay = "move"
 [node name="coin" parent="." instance=ExtResource("4_lbhrr")]
 position = Vector2(348, 31)
 collision_mask = 2
+
+[node name="killzone" parent="." instance=ExtResource("5_iywne")]
+position = Vector2(252, 147)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+shape = SubResource("WorldBoundaryShape2D_p57ef")
