@@ -392,6 +392,10 @@ collision_mask = 2
 position = Vector2(793, 51)
 collision_mask = 2
 
+[node name="coin3" parent="coins" instance=ExtResource("4_lbhrr")]
+position = Vector2(1494, 64)
+collision_mask = 2
+
 [node name="platforms" type="Node" parent="."]
 
 [node name="Platform_Long_Grass" parent="platforms" instance=ExtResource("3_lnu2h")]
