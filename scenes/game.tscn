@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://bfd0k3scq3tc5"]
+[gd_scene load_steps=16 format=4 uid="uid://bfd0k3scq3tc5"]
 
 [ext_resource type="PackedScene" uid="uid://d4abjbac3h07a" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://dg04yudebn20s" path="res://assets/sprites/world_tileset.png" id="2_yqjtg"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c8j2ociguisrl" path="res://scenes/coin.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://bvxmtnwsj475a" path="res://scenes/killzone.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://cg3tppx41h3ok" path="res://scenes/slime.tscn" id="6_p57ef"]
+[ext_resource type="FontFile" uid="uid://ddutt88jswc3d" path="res://assets/fonts/PixelOperator8.ttf" id="7_u5sy4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iywne"]
 texture = ExtResource("2_yqjtg")
@@ -403,3 +404,44 @@ autoplay = "move"
 
 [node name="slime" parent="." instance=ExtResource("6_p57ef")]
 position = Vector2(935, 78)
+
+[node name="Labels" type="Node" parent="."]
+
+[node name="controls_tutorial" type="Label" parent="Labels"]
+offset_left = 56.0
+offset_top = -12.0
+offset_right = 161.0
+offset_bottom = 41.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_u5sy4")
+theme_override_font_sizes/font_size = 8
+text = "JUMP: W, SPACE, ⬆
+LEFT: A, ⬅
+RIGHT: D, →
+"
+
+[node name="coin_tutorial" type="Label" parent="Labels"]
+offset_left = 297.0
+offset_right = 402.0
+offset_bottom = 53.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_u5sy4")
+theme_override_font_sizes/font_size = 8
+text = "COLLECT THE COIN
+"
+
+[node name="slime_tutorial" type="Label" parent="Labels"]
+offset_left = 922.0
+offset_top = -2.0
+offset_right = 1074.0
+offset_bottom = 51.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_u5sy4")
+theme_override_font_sizes/font_size = 8
+text = "AVOID THE SLIME MONSTER"
