@@ -4,4 +4,6 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	game_manager.add_point()
+	CoinPickup.play()
+	CoinPickup.seek(0.099)
 	queue_free()
